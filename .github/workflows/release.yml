@@ -29,13 +29,11 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Move index.yaml  
+      - name: Move index.yaml
         run: |
           git checkout gh-pages
           git pull
           mv index.yaml docs/index.yaml
-          rm -rf .cr-release-packages
-          rm 
           git add .
           git commit -m "move index.yaml"
           git push
