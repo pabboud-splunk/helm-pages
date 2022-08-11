@@ -27,6 +27,7 @@ jobs:
       - name: Move index.yaml  
         run: |
           git checkout gh-pages
+          git pull
           mv index.yaml docs/index.yaml
           git add .
           git commit -m "move index.yaml"
