@@ -24,8 +24,11 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       
-      - uses: actions/checkout@v3
+      - name: Checkout Github Pages
+        uses: actions/checkout@v3
         with:
           ref: gh-pages
+          
+      - name: Move index.yaml  
         run: |
           mv index.yaml docs/index.yaml
