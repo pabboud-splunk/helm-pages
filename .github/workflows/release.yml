@@ -26,16 +26,3 @@ jobs:
           config: .github/workflows/cr.yaml
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-      - name: Copy index.yaml  
-        run: |
-          git checkout gh-pages
-          git pull
-          if [ -f index.yaml ]; then
-            cp index.yaml docs/index.yaml
-            rm -rf .cr-index
-            rm -rf .cr-release-packages
-            git add .
-            git commit -m "Copying index.yaml"
-            git push
-          fi
