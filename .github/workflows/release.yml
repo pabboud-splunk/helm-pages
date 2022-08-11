@@ -32,6 +32,7 @@ jobs:
           git pull
           if [ -f index.yaml ]; then
             mv index.yaml docs/index.yaml
+            echo "Hello"
             git add .
             git commit -m "moving index.yaml"
             git push
