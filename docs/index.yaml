@@ -3,6 +3,16 @@ entries:
   splunk-operator:
   - apiVersion: v2
     appVersion: 2.0.0
+    created: "2022-08-11T07:05:16.112393885Z"
+    description: A Helm chart for the Splunk Operator for Kubernetes
+    digest: 9bad0268a6575cf17865da0fd3591f18197ac195cb50cc80dee750e16b8fbcc0
+    name: splunk-operator
+    type: application
+    urls:
+    - https://github.com/pabboud-splunk/helm-pages/releases/download/splunk-operator-1.3.0/splunk-operator-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v2
+    appVersion: 2.0.0
     created: "2022-08-11T06:56:21.524083392Z"
     description: A Helm chart for the Splunk Operator for Kubernetes
     digest: 17318788e821afd4ccebd7750daf1f13ec0b11a65ccf57ea34bd94ca1eaf6a64
@@ -41,4 +51,4 @@ entries:
     urls:
     - https://github.com/pabboud-splunk/helm-pages/releases/download/splunk-operator-1.2.6/splunk-operator-1.2.6.tgz
     version: 1.2.6
-generated: "2022-08-11T06:56:21.524106492Z"
+generated: "2022-08-11T07:05:16.112415685Z"
