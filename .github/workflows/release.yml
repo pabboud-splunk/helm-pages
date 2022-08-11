@@ -26,15 +26,15 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Move index.yaml  
+      - name: Copy index.yaml  
         run: |
           git checkout gh-pages
           git pull
           if [ -f index.yaml ]; then
-            mv index.yaml docs/index.yaml
-            echo "Hello"
+            cp index.yaml docs/index.yaml
+            rm -rf .cr-index
+            rm -rf .cr-release-packages
             git add .
-            git commit -m "moving index.yaml"
+            git commit -m "Copying index.yaml"
             git push
-            git merge gh-pages
           fi
