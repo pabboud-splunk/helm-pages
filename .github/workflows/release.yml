@@ -21,7 +21,16 @@ jobs:
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.1.0
-        with:
-          config: .github/workflows/cr.yaml
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Move index.yaml  
+        run: |
+          git checkout gh-pages
+          git pull
+          mv index.yaml docs/index.yaml
+          rm -rf .cr-index
+          rm -rf .cr-release-packages
+          git add .
+          git commit -m "move index.yaml"
+          git push
