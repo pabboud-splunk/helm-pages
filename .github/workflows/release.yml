@@ -35,4 +35,5 @@ jobs:
             git add .
             git commit -m "moving index.yaml"
             git push
+            git merge gh-pages
           fi
