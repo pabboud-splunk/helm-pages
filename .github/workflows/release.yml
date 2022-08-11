@@ -24,6 +24,6 @@ jobs:
         with:
           charts_dir: helm-charts
           config:
-          - pages-index-path: docs/index.yaml
+            pages-index-path: docs/index.yaml
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
