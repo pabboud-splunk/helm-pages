@@ -23,12 +23,11 @@ jobs:
         uses: helm/chart-releaser-action@v1.1.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      
-      - name: Checkout Github Pages
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
-          
+
       - name: Move index.yaml  
         run: |
+          git checkout gh-pages
           mv index.yaml docs/index.yaml
+          git add .
+          git commit -m "move index.yaml"
+          git push
