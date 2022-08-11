@@ -28,9 +28,9 @@ jobs:
         run: |
           git checkout gh-pages
           git pull
-          mv index.yaml docs/index.yaml
+          [ -f index.yaml ] && mv index.yaml docs/index.yaml
           rm -rf .cr-index
           rm -rf .cr-release-packages
           git add .
-          git commit -m "move index.yaml"
+          git commit -m "moving index.yaml"
           git push
