@@ -35,7 +35,7 @@ splunkOperator:
   imagePullSecrets: []
 
   # Give operator cluster-wide access, otherwise access is limited to operator namespace
-  clusterWideAccess: false
+  clusterWideAccess: true
 
   # List namespaces to be watched by Splunk Operator e.x "namespace1,namespace2", must have cluster-wide access
   # Default watches the entire cluster
