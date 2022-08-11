@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  splunk-operator:
+  - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2022-08-11T21:44:05.192201505Z"
+    description: A Helm chart for the Splunk Operator for Kubernetes
+    digest: daa6ef1b9e43300fcc708231525a92918ef5842eaa73cba75f68c6cb4f028e1e
+    name: splunk-operator
+    type: application
+    urls:
+    - https://github.com/pabboud-splunk/helm-pages/releases/download/splunk-operator-4.0.0/splunk-operator-4.0.0.tgz
+    version: 4.0.0
+generated: "2022-08-11T21:44:05.192213506Z"
